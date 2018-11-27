@@ -1,16 +1,16 @@
 package com.datastructure.algorithms;
 
-public class Node {
-    private int value;
+public class Node<T> {
+    private T value;
     private Node next;
 
-    public int getValue() {
+    public T getValue() {
         return value;
     }
-    public Node getNode() {return next;}
+    public Node getNext() {return next;}
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value=value;
     }
-    public void setNode(Node next) {this.next=next;}
+    public void setNext(Node next) {this.next=next;}
 }

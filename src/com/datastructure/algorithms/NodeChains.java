@@ -15,7 +15,7 @@ public class NodeChains {
 //      +-------+------+         +-------+------+
 //      |  3    | *    |-------->|  5    | null |
 //      +-------+------+         +-------+------+
-        first.setNode(middle);
+        first.setNext(middle);
 //      +-------+------+         +-------+------+   +-------+------+
 //      |  3    | *    |-------->|  5    | null |   |  7    | null |
 //      +-------+------+         +-------+------+   +-------+------+
@@ -24,14 +24,16 @@ public class NodeChains {
 //      +-------+------+         +-------+------+        +-------+------+
 //      |  3    | *    |-------->|  5    | *    |---->   |  7    | null |
 //      +-------+------+         +-------+------+        +-------+------+
-        middle.setNode(last);
+        middle.setNext(last);
 //      Now iterate over each node and print the node list.
         printList(first);
     }
     private static void printList(Node node) {
+
         while(node !=null) {
             System.out.println(node.getValue());
-            node = node.getNode();
+
+            node = node.getNext();
         }
     }
 }
